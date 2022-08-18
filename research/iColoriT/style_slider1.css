@@ -1,55 +1,35 @@
-:root {
-  --slider-height: 400px;
-}
-
-#slider-wrap {
+#slider-wrap-1 {
   width: 100%;
-  height: var(--slider-height);
+  aspect-ratio: 3 / 1.15; /* TODO change */
   position: relative;
   overflow: hidden;
 }
 
-#slider-wrap ul#slider {
+#slider-wrap-1 ul#slider {
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#slider-wrap ul#slider li {
+#slider-wrap-1 ul#slider li {
   float: left;
   position: relative;
 }
 
-#slider-wrap ul#slider li>div {
-  position: absolute;
-  top: calc(var(--slider-height) - 30px);
-  left: 45%;
-}
-
-#slider-wrap ul#slider li>div h3 {
-  font-size: 36px;
-  text-transform: uppercase;
-}
-
-#slider-wrap ul#slider li>div span {
-  font-size: 21px;
-}
-
-#slider-wrap ul#slider li img {
+#slider-wrap-1 ul#slider li img {
   display: block;
-  width: auto;
-  height: calc(var(--slider-height) - 65px);
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 /*btns*/
-.slider-btns {
+.slider-btns-1 {
   position: absolute;
   width: 50px;
   height: 60px;
-  top: 42%;
+  top: 50%;
   margin-top: -25px;
   line-height: 57px;
   text-align: center;
@@ -65,34 +45,34 @@
   transition: all 0.1s ease;
 }
 
-.slider-btns:hover {
+.slider-btns-1:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
-#next {
+#next-1 {
   right: -50px;
   border-radius: 7px 0px 0px 7px;
   color: #eee;
 }
 
-#previous {
+#previous-1 {
   left: -50px;
   border-radius: 0px 7px 7px 7px;
   color: #eee;
 }
 
-#slider-wrap.active #next {
+#slider-wrap-1.active #next-1 {
   right: 0px;
 }
 
-#slider-wrap.active #previous {
+#slider-wrap-1.active #previous-1 {
   left: 0px;
 }
 
 /*bar*/
-#slider-pagination-wrap {
+#slider-pagination-wrap-1 {
   min-width: 20px;
-  margin-top: calc(var(--slider-height) - 60px);
+  margin-top: 33.5%;
   margin-left: auto;
   margin-right: auto;
   height: 15px;
@@ -100,11 +80,11 @@
   text-align: center;
 }
 
-#slider-pagination-wrap ul {
+#slider-pagination-wrap-1 ul {
   width: 100%;
 }
 
-#slider-pagination-wrap ul li {
+#slider-pagination-wrap-1 ul li {
   margin: 0 4px;
   display: inline-block;
   width: 5px;
@@ -116,7 +96,7 @@
   top: 0;
 }
 
-#slider-pagination-wrap ul li.active {
+#slider-pagination-wrap-1 ul li.active {
   width: 12px;
   height: 12px;
   top: 3px;
@@ -126,8 +106,8 @@
 }
 
 /*ANIMATION*/
-#slider-wrap ul,
-#slider-pagination-wrap ul li {
+#slider-wrap-1 ul,
+#slider-pagination-wrap-1 ul li {
   -webkit-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
   -o-transition: all 0.3s cubic-bezier(1, .01, .32, 1);
   transition: all 0.3s cubic-bezier(1, .01, .32, 1);

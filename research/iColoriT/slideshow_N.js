@@ -29,13 +29,13 @@ prevBtn_NNN.addEventListener('click', function () {
 // hover
 slideWrapper_NNN.addEventListener('mouseover', function () {
     this.classList.add('active');
-    // clearInterval(autoSlider_NNN);
+    clearInterval(autoSlider_NNN);
 });
 slideWrapper_NNN.addEventListener('mouseleave', function () {
     this.classList.remove('active');
-    // autoSlider_NNN = setInterval(function () {
-    //     plusSlides_NNN(1);
-    // }, 5000);
+    autoSlider_NNN = setInterval(function () {
+        plusSlides_NNN(1);
+    }, 5000);
 });
 
 
@@ -74,6 +74,6 @@ function pagination_NNN() {
 }
 
 pagination_NNN();
-// var autoSlider_NNN = setInterval(function () {
-//     plusSlides_NNN(1);
-// }, 5000);
+var autoSlider_NNN = setInterval(function () {
+    plusSlides_NNN(1);
+}, 5000);
