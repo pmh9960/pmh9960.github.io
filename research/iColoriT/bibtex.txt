@@ -1,0 +1,6 @@
+@article{lee2022icolorit,
+  title={iColoriT: Towards Propagating Local Hint to the Right Region in Interactive Colorization by Leveraging Vision Transformer},
+  author={Lee, Sanghyeon and Yun, Jooyeol and Park, Minho},
+  journal={arXiv preprint arXiv:2207.06831},
+  year={2022}
+}
