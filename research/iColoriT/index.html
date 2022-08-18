@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_slider1.css">
+    <link rel="stylesheet" href="style_slider2.css">
+    <link rel="stylesheet" href="style_slider3.css">
+    <link rel="stylesheet" href="style_slider4.css">
     <title>iColoriT</title>
     <style type="text/css">
         .center {
@@ -36,7 +40,7 @@
             <div class="col-md-2"></div>
             <div class="col-md-8">
                 <center>
-                    <h2 style="margin: 20px;">iColoriT: Towards Propagating Local Hint to the Right Region in
+                    <h2 style="margin: 20px; line-height: 1.2em;">iColoriT: Towards Propagating Local Hint to the Right Region in
                         Interactive Colorization by Leveraging Vision Transformer</h2>
                     <h4>WACV 2023</h4>
                     <!-- author -->
@@ -46,7 +50,7 @@
                             <div class="font-italic">shlee6825@kaist.ac.kr</div>
                         </div>
                         <div class="col-sm-4">
-                            <a>Jooyeol Yun*</a>
+                            <a href="https://github.com/YeolJ00">Jooyeol Yun*</a>
                             <div class="font-italic">blizard072@kaist.ac.kr</div>
                         </div>
                         <div class="col-sm-4">
@@ -86,8 +90,8 @@
                 </div>
                 <hr> -->
                 <hr>
+                <h3>Abstract</h3>
                 <div>
-                    <h3>Abstract</h3>
                     <p class="lead text-justify">
                         Point-interactive image colorization aims to colorize grayscale images when a user provides the colors for specific
                         locations. It is essential for point-interactive colorization methods to appropriately propagate user-provided
@@ -105,8 +109,8 @@
                     </p>
                 </div>
                 <hr>
+                <h3>Paper</h3>
                 <div>
-                    <h3>Paper</h3>
                     <div class="row">
                         <div class="col-sm-3">
                             <img src="./figs/paper_img.png" class="img-fluid border" alt="" style="margin:20px;">
@@ -131,8 +135,8 @@
                     </div>
                 </div>
                 <hr>
+                <h3>Method overview</h3>
                 <div>
-                    <h3>Method overview</h3>
                     <center>
                         <figure class="figure">
                             <img src="./figs/main_method_main.png" class="figure-img img-fluid" alt="Responsive image" style="margin:0px;">
@@ -146,73 +150,117 @@
                     </center>
                 </div>
                 <hr>
-                <div>
-                    <h3>Diverse Colorization Results</h3>
-                    <center>
-                        <figure class="figure">
-                            <img src="./figs/main_multi_color.png" class="figure-img img-fluid" alt="Responsive image" style="margin:0px;">
-                            <figcaption class="figure-caption text-justify">
-                                <center>
-                                    Caption.
-                                    <!-- TODO -->
-                                </center>
-                            </figcaption>
-                        </figure>
-                    </center>
-                </div>
-                <hr>
-                <div>
-                    <h3>Rollout</h3>
-                    <center>
-                        <figure class="figure">
-                            <img src="./figs/main_analysis_rollout.png" class="figure-img img-fluid" alt="Responsive image"
-                                style="margin:0px;">
-                            <figcaption class="figure-caption text-justify">
-                                <center>
-                                    Caption.
-                                    <!-- TODO -->
-                                </center>
-                            </figcaption>
-                        </figure>
-                    </center>
-                </div>
-                <hr>
-                <!-- Slideshow container -->
-                <div class="slideshow-container">
-                    <h3>Uncurated Samples</h3>
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides">
-                        <img src="./figs/supp_uncurated_ours_p1.png" style="width:100%">
-                        <div class="slideshow-text">P1</div>
-                    </div>
-                    <div class="mySlides">
-                        <img src="./figs/supp_uncurated_ours_p5.png" style="width:100%">
-                        <div class="slideshow-text">P5</div>
-                    </div>
-                    <div class="mySlides">
-                        <img src="./figs/supp_uncurated_ours_p10.png" style="width:100%">
-                        <div class="slideshow-text">P10</div>
-                    </div>
-                    <div class="mySlides">
-                        <img src="./figs/supp_uncurated_ours_p100.png" style="width:100%">
-                        <div class="slideshow-text">P100</div>
-                    </div>
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-                <br>
+                <h3>iColoriT vs. Zhang et al.</h3>
+                <div id="slider-wrap-4">
+                    <ul id="slider">
+                        <li>
+                            <img src="./figs/icolorit_vs_zhang_1.png">
+                        </li>
+                        <li>
+                            <img src="./figs/icolorit_vs_zhang_2.png">
+                        </li>
+                        <li>
+                            <img src="./figs/icolorit_vs_zhang_3.png">
+                        </li>
+                    </ul>
 
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
-                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <div class="slider-btns-4" id="next-4"><span>▶</span></div>
+                    <div class="slider-btns-4" id="previous-4"><span>◀</span></div>
+
+                    <div id="slider-pagination-wrap-4">
+                        <ul></ul>
+                    </div>
                 </div>
                 <hr>
+                <h3>Diverse Colorization Results</h3>
+                <div id="slider-wrap-3">
+                    <ul id="slider">
+                        <li>
+                            <img src="./figs/diverse_color1.png">
+                        </li>
+                        <li>
+                            <img src="./figs/diverse_color2.png">
+                        </li>
+                        <li>
+                            <img src="./figs/diverse_color3.png">
+                        </li>
+                        <li>
+                            <img src="./figs/diverse_color4.png">
+                        </li>
+                    </ul>
+
+                    <div class="slider-btns-3" id="next-3"><span>▶</span></div>
+                    <div class="slider-btns-3" id="previous-3"><span>◀</span></div>
+
+                    <div id="slider-pagination-wrap-3">
+                        <ul></ul>
+                    </div>
+                </div>
+                <hr>
+                <h3>Rollout</h3>
+                <div id="slider-wrap-2">
+                    <ul id="slider">
+                        <li>
+                            <div>
+                                <h4>Caption</h4>
+                            </div>
+                            <img src="./figs/rollout_p1.png">
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Caption</h4>
+                            </div>
+                            <img src="./figs/rollout_p2.png">
+                        </li>
+                    </ul>
+
+                    <div class="slider-btns-2" id="next-2"><span>▶</span></div>
+                    <div class="slider-btns-2" id="previous-2"><span>◀</span></div>
+
+                    <div id="slider-pagination-wrap-2">
+                        <ul></ul>
+                    </div>
+                </div>
+                <!-- <hr>
+                <h3>Uncurated Samples</h3>
+                <div id="slider-wrap">
+                    <ul id="slider">
+                        <li>
+                            <div>
+                                <h4>Caption</h4>
+                            </div>
+                            <img src="./figs/supp_uncurated_ours_p1.png">
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Caption</h4>
+                            </div>
+                            <img src="./figs/supp_uncurated_ours_p5.png">
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Caption</h4>
+                            </div>
+                            <img src="./figs/supp_uncurated_ours_p10.png">
+                        </li>
+                        <li>
+                            <div>
+                                <h4>Caption</h4>
+                            </div>
+                            <img src="./figs/supp_uncurated_ours_p100.png">
+                        </li>
+                    </ul>
+
+                    <div class="slider-btns" id="next"><span>▶</span></div>
+                    <div class="slider-btns" id="previous"><span>◀</span></div>
+
+                    <div id="slider-pagination-wrap">
+                        <ul></ul>
+                    </div>
+                </div> -->
+                <hr>
                 <div>
-                    <h3>Citation</h3> <!-- TODO -->
+                    <h3>Citation</h3>
                     <pre><code>@article{lee2022icolorit,
     title={iColoriT: Towards Propagating Local Hint to the Right Region in Interactive Colorization by Leveraging Vision Transformer},
     author={Lee, Sanghyeon and Yun, Jooyeol and Park, Minho},
@@ -241,6 +289,9 @@
     <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
     <script src="./slideshow.js"></script>
+    <script src="./slideshow_2.js"></script>
+    <script src="./slideshow_3.js"></script>
+    <script src="./slideshow_4.js"></script>
 </body>
 
 </html>
