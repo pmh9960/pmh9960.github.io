@@ -29,13 +29,13 @@ prevBtn.addEventListener('click', function () {
 // hover
 slideWrapper.addEventListener('mouseover', function () {
     this.classList.add('active');
-    // clearInterval(autoSlider);
+    clearInterval(autoSlider);
 });
 slideWrapper.addEventListener('mouseleave', function () {
     this.classList.remove('active');
-    // autoSlider = setInterval(function () {
-    //     plusSlides(1);
-    // }, 5000);
+    autoSlider = setInterval(function () {
+        plusSlides(1);
+    }, 5000);
 });
 
 
@@ -74,6 +74,6 @@ function pagination() {
 }
 
 pagination();
-// var autoSlider = setInterval(function () {
-//     plusSlides(1);
-// }, 5000);
+var autoSlider = setInterval(function () {
+    plusSlides(1);
+}, 5000);

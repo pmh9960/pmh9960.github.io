@@ -29,13 +29,13 @@ prevBtn_3.addEventListener('click', function () {
 // hover
 slideWrapper_3.addEventListener('mouseover', function () {
     this.classList.add('active');
-    // clearInterval(autoSlider_3);
+    clearInterval(autoSlider_3);
 });
 slideWrapper_3.addEventListener('mouseleave', function () {
     this.classList.remove('active');
-    // autoSlider_3 = setInterval(function () {
-    //     plusSlides_3(1);
-    // }, 5000);
+    autoSlider_3 = setInterval(function () {
+        plusSlides_3(1);
+    }, 5000);
 });
 
 
@@ -74,6 +74,6 @@ function pagination_3() {
 }
 
 pagination_3();
-// var autoSlider_3 = setInterval(function () {
-//     plusSlides_3(1);
-// }, 5000);
+var autoSlider_3 = setInterval(function () {
+    plusSlides_3(1);
+}, 5000);

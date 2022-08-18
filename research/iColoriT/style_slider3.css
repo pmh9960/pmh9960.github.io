@@ -1,5 +1,5 @@
 :root {
-  --slider-height-3: 300px;
+  --slider-height-3: 400px;
 }
 
 #slider-wrap-3 {
@@ -38,7 +38,7 @@
 
 #slider-wrap-3 ul#slider li img {
   display: block;
-  width: 100%;
+  width: auto;
   height: calc(var(--slider-height-3) - 65px);
   margin-left: auto;
   margin-right: auto;
