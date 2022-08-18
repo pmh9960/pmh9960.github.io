@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>iColoriT</title>
+    <style type="text/css">
+        .center {
+            text-align: center;
+        }
+
+        .lead {
+            font-size: 1.0rem;
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+
+        .author {
+            font-size: 1.1rem;
+        }
+
+        .figure-caption {
+            color: #6c757d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <center>
+                    <h2 style="margin: 20px;">iColoriT: Towards Propagating Local Hint to the Right Region in
+                        Interactive Colorization by Leveraging Vision Transformer</h2>
+                    <h4>WACV 2023</h4>
+                    <!-- author -->
+                    <div class="row author" style="margin-top:18px;">
+                        <div class="col-sm-4">
+                            <a href="https://sites.google.com/view/sanghyeonlee/%ED%99%88">Sanghyeon Lee*</a>
+                            <div class="font-italic">shlee6825@kaist.ac.kr</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a>Jooyeol Yun*</a>
+                            <div class="font-italic">blizard072@kaist.ac.kr</div>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="https://https://pmh9960.github.io/">Minho Park*</a>
+                            <div class="font-italic">m.park@kaist.ac.kr</div>
+                        </div>
+                    </div>
+                    <div class="row author" style="margin-top:18px;">
+                        <div class="col-sm-12">
+                            <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>
+                            <div class="font-italic">jchoo@kaist.ac.kr</div>
+                        </div>
+                    </div>
+                    <div class="row author" , style="margin-top:18px;">
+                        <div class="col-sm-12">KAIST</div>
+                    </div>
+                </center>
+                <center>
+                    <figure class="figure">
+                        <img src="./figs/iColoriT_web_demo.gif" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:20px 0px;">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Qualitative results of edge enhancement given user-given scribbles in the proposed framework.
+                                <!-- TODO caption -->
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <!-- TODO -->
+                <!-- <hr>
+                <div>
+                    <h3>Video</h3>
+                    <center>
+                        <iframe width="709" height="399" src="https://www.youtube.com/..." frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                </div>
+                <hr> -->
+                <hr>
+                <div>
+                    <h3>Abstract</h3>
+                    <p class="lead text-justify">
+                        Point-interactive image colorization aims to colorize grayscale images when a user provides the colors for specific
+                        locations. It is essential for point-interactive colorization methods to appropriately propagate user-provided
+                        colors (<i>i.e.,</i> user hints) in the entire image to obtain a reasonably colorized image with minimal user
+                        effort. However, existing approaches often produce partially colorized results due to the inefficient design of
+                        stacking convolutional layers to propagate hints to distant relevant regions. To address this problem, we present
+                        iColoriT, a novel point-interactive colorization Vision Transformer capable of propagating user hints to relevant
+                        regions, leveraging the global receptive field of Transformers. The self-attention mechanism of Transformers enables
+                        iColoriT to selectively colorize relevant regions with only a few local hints. Our approach colorizes images in
+                        real-time by utilizing pixel shuffling, an efficient upsampling technique that replaces the decoder architecture.
+                        Also, in order to mitigate the artifacts caused by pixel shuffling with large upsampling ratios, we present the
+                        local stabilizing layer. Extensive quantitative and qualitative results demonstrate that our approach highly
+                        outperforms existing methods for point-interactive colorization, producing accurately colorized images with a user's
+                        minimal effort.
+                    </p>
+                </div>
+                <hr>
+                <div>
+                    <h3>Paper</h3>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="./figs/paper_img.png" class="img-fluid border" alt="" style="margin:20px;">
+                        </div>
+                        <div class="col" style="margin-top: auto; margin-bottom: auto;">
+                            <div class="align-middle">
+                                <a href="./2207.06831.pdf">[Paper PDF]</a>
+                                <a href="https://arxiv.org/abs/2207.06831">[Arxiv]</a>
+                                <!-- <a href="https://scholar.googleusercontent.com/scholar.bib?q=info:3syu6fizQcYJ:scholar.google.com/&output=citation&scisdr=CgVb7RezEMvZ4zVDrX8:AAGBfm0AAAAAXudGtX8XEpHQ7ppftvlFMwUPtLgbGVXv&scisig=AAGBfm0AAAAAXudGtTSBHbdETWqFmYD91v8cMj_a6eWU&scisf=4&ct=citation&cd=-1&hl=ko">[Bibtex]</a> -->
+                                <!-- <a href="https://drive.google.com/file/d/1xu-V6khowTvzXAkD2tY1-gBB7g-RFfGy/view?usp=sharing">[Video]</a> -->
+                                <!-- <a href="https://drive.google.com/file/d/1FVFqhogxTzPwV-ay0UIoRHqmlkNQsQS3/view?usp=sharing">[Slide]</a> -->
+                                <a href="">[Github]</a> <!-- TODO -->
+                                <p class="lead">
+                                    Paper <br>
+                                    WACV, 2023. <br>
+                                    Sanghyeon Lee, Jooyeol Yun, Minho Park, and Jaegul Choo. "iColoriT: Towards
+                                    Propagating Local Hint to the Right Region in Interactive Colorization by Leveraging
+                                    Vision Transformer"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <h3>Method overview</h3>
+                    <center>
+                        <figure class="figure">
+                            <img src="./figs/main_method_main.png" class="figure-img img-fluid" alt="Responsive image" style="margin:0px;">
+                            <figcaption class="figure-caption text-justify">
+                                <center>
+                                    An overview of our proposed method.
+                                    <!-- TODO -->
+                                </center>
+                            </figcaption>
+                        </figure>
+                    </center>
+                </div>
+                <hr>
+                <div>
+                    <h3>Diverse Colorization Results</h3>
+                    <center>
+                        <figure class="figure">
+                            <img src="./figs/main_multi_color.png" class="figure-img img-fluid" alt="Responsive image" style="margin:0px;">
+                            <figcaption class="figure-caption text-justify">
+                                <center>
+                                    Caption.
+                                    <!-- TODO -->
+                                </center>
+                            </figcaption>
+                        </figure>
+                    </center>
+                </div>
+                <hr>
+                <div>
+                    <h3>Rollout</h3>
+                    <center>
+                        <figure class="figure">
+                            <img src="./figs/main_analysis_rollout.png" class="figure-img img-fluid" alt="Responsive image"
+                                style="margin:0px;">
+                            <figcaption class="figure-caption text-justify">
+                                <center>
+                                    Caption.
+                                    <!-- TODO -->
+                                </center>
+                            </figcaption>
+                        </figure>
+                    </center>
+                </div>
+                <hr>
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+                    <h3>Uncurated Samples</h3>
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides">
+                        <img src="./figs/supp_uncurated_ours_p1.png" style="width:100%">
+                        <div class="slideshow-text">P1</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="./figs/supp_uncurated_ours_p5.png" style="width:100%">
+                        <div class="slideshow-text">P5</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="./figs/supp_uncurated_ours_p10.png" style="width:100%">
+                        <div class="slideshow-text">P10</div>
+                    </div>
+                    <div class="mySlides">
+                        <img src="./figs/supp_uncurated_ours_p100.png" style="width:100%">
+                        <div class="slideshow-text">P100</div>
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                </div>
+                <hr>
+                <div>
+                    <h3>Citation</h3> <!-- TODO -->
+                    <pre><code>@article{lee2022icolorit,
+    title={iColoriT: Towards Propagating Local Hint to the Right Region in Interactive Colorization by Leveraging Vision Transformer},
+    author={Lee, Sanghyeon and Yun, Jooyeol and Park, Minho},
+    journal={arXiv preprint arXiv:2207.06831},
+    year={2022}
+    }</code></pre>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
+            });
+        </script>
+    <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+    <script src="./slideshow.js"></script>
+</body>
+
+</html>
