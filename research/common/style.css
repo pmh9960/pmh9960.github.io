@@ -1,0 +1,39 @@
+/* For BibTeX */
+
+.center {
+  text-align: center;
+}
+
+.lead {
+  font-size: 1.0rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.author {
+  font-size: 1.1rem;
+}
+
+.figure-caption {
+  color: #6c757d;
+}
+
+pre {
+  font-size: 0.9em;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 3px;
+  background-color: rgb(235, 235, 235);
+  overflow-x: auto;
+}
+
+h3 {
+  line-height: 2em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

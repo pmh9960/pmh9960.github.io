@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../common/style.css">
+    <title>GCDP: Official Project Page</title>
+    <link rel="icon" type="image/x-icon" href="../common/figs/fevicon_davian.png">
+</head>
+
+<body>
+    <div class="container" style="margin-top:20px;">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <!-- Title and autors -->
+                <center>
+                    <h2 style="margin-top: 20px; margin-bottom: 20px; line-height: 1.2em;">
+                        Learning to Generate Semantic Layouts for Higher Text-Image Correspondence in Text-to-Image Synthesis</h2>
+                    <h4>ICCV 2023</h4>
+                    <!-- author -->
+                    <div class="row author" style="margin-top:18px;">
+                        <div class="col-sm-3">
+                            <a href="https://pmh9960.github.io/" target="_blank">Minho Park*</a>
+                            <div class="font-italic">m.park@kaist.ac.kr</div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://github.com/YeolJ00" target="_blank">Jooyeol Yun*</a>
+                            <div class="font-italic">blizzard072@kaist.ac.kr</div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://github.com/shadow2496" target="_blank">Seunghwan Choi</a>
+                            <div class="font-italic">shadow2496@kaist.ac.kr</div>
+                        </div>
+                        <div class="col-sm-3">
+                            <a href="https://sites.google.com/site/jaegulchoo/" target="_blank">Jaegul Choo</a>
+                            <div class="font-italic">jchoo@kaist.ac.kr</div>
+                        </div>
+                    </div>
+                    <div class="row author" , style="margin-top:18px; font-size: 20px;">
+                        <div class="col-sm-12">Korea Advanced Institute of Science and Technology (KAIST)</div>
+                    </div>
+                    <div style="margin-top:15px">
+                        <sup style="font-size: 15px">* indicates equal contrubutions.</sup>
+                    </div>
+                </center>
+                <!-- Teaser -->
+                <!-- <center>
+                    <figure class="figure">
+                        <img src="../teaser/gcdp.png" class="figure-img img-fluid" alt="Responsive image" style="margin:20px 0px;">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                The graphical modeling of the proposed Gaussian-categorical Diffusion Process.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center> -->
+                <!-- ICONs (arXiv, Code, BibTeX) -->
+                <div style="margin-top:15px"></div>
+                <center>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <a href="" style="text-decoration: none;color: #000000;" target="_blank">
+                                <div>
+                                    <img src="../common/figs/icon_arxiv.png" height="64px"></img>
+                                    <h4>arXiv</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="" style="text-decoration: none;color: #000000;" target="_blank">
+                                <div>
+                                    <img src="../common/figs/icon_github.png" height="64px"></img>
+                                    <h4>Code</h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-sm-4">
+                            <a href="" style="text-decoration: none;color: #000000;" target="_blank">
+                                <div>
+                                    <img src="../common/figs/icon_bibtex.png" height="64px"></img>
+                                    <h4>BibTeX</h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </center>
+                <hr>
+                <!-- Abstract -->
+                <h3>Abstract</h3>
+                <div>
+                    <p class="lead text-justify">
+                        Existing text-to-image generation approaches have set high standards for photorealism and text-image correspondence,
+                        largely benefiting from web-scale text-image datasets, which can include up to 5 billion pairs. However,
+                        text-to-image generation models trained on domain-specific datasets, such as urban scenes, medical images, and
+                        faces, still suffer from low text-image correspondence due to the lack of text-image pairs. Additionally,
+                        collecting billions of text-image pairs for a specific domain can be time-consuming and costly.
+                        Thus, ensuring high text-image correspondence without relying on web-scale text-image datasets remains a challenging
+                        task. In this paper, we present a novel approach for enhancing text-image correspondence by leveraging available
+                        semantic layouts. Specifically, we propose a Gaussian-categorical diffusion process that simultaneously generates
+                        both images and corresponding layout pairs. Our experiments reveal that we can guide text-to-image generation models
+                        to be aware of the semantics of different image regions, by training the model to generate semantic labels for each
+                        pixel. We demonstrate that our approach achieves higher text-image correspondence compared to existing text-to-image
+                        generation approaches in the Multi-Modal CelebA-HQ and the Cityscapes dataset, where text-image pairs are scarce.
+                    </p>
+                </div>
+                <hr>
+                <!-- Paper preview -->
+                <h3>Paper</h3>
+                <div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <img src="./figs/paper_preview.png" class="img-fluid border" alt="" style="margin:20px;">
+                        </div>
+                        <div class="col" style="margin-top: auto; margin-bottom: auto;">
+                            <div class="align-middle" style="width: 100%;">
+                                [Paper PDF] <!-- <a href="" target="_blank">[Paper PDF]</a> -->
+                                [arXiv] <!-- <a href="" target="_blank">[arXiv]</a> -->
+                                <!-- <a href="" target="_blank">[Bibtex]</a> -->
+                                <!-- <a href="" target="_blank">[Video]</a> -->
+                                <!-- <a href="" target="_blank">[Slide]</a> -->
+                                [Github] <!-- <a href="" target="_blank">[Github]</a> -->
+                                <p class="lead">
+                                    ICCV, 2023. <br>
+                                    Minho Park, Jooyeol Yun, Seunghwan Choi, and Jaegul Choo.<br>
+                                    "Learning to Generate Semantic Layouts for Higher Text-Image Correspondence in Text-to-Image Synthesis"
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <!-- Introduction -->
+                <h3>Introduction</h3>
+                <center>
+                    <figure class="figure">
+                        <img src="./figs/intro_motivation.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom: 10px;" width="75%">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Recall of facial attributes specified in the text descriptions. Text-to-image generation approaches trained
+                                on a subset of the Multi-Modal CelebA-HQ often fail to reflect text conditions. Facial attributes are
+                                classified with a pretrained attribute classifier.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <hr>
+                <!-- Method overview -->
+                <h3>Method</h3>
+                <h4>Gaussian-categorical Distribution</h4>
+                <center>
+                    <div style="margin-top:25px"></div>
+                    $
+                    \begin{align}
+                    \mathcal{NC}(\mathbb{x, y; \mu, \Sigma, \Theta})
+                    &= \mathcal{C} (\mathbb{y; \Theta}) \cdot \mathcal{N}(\mathbb{x;\mu_y,\Sigma_y}) \\
+                    &= \left( \prod_{i=1}^M \Theta_{i, \mathbb{y}_i} \right)
+                    \left( 2\pi \right)^{-\frac{N}{2}}
+                    \left| \mathbb{\Sigma_y} \right|^{-\frac{1}{2}}
+                    \exp \left( -\frac{1}{2} (\mathbb{x} - \mathbb{\mu_y})^\top
+                    \mathbb{\Sigma_y}^{-1} (\mathbb{x} - \mathbb{\mu_y}) \right)
+                    \end{align}
+                    $
+                    <br>
+                    <div style="margin-top:20px"></div>
+                    where
+                    $
+                    \mathbb{x} \in \mathbb{R}^{N}, \mathbb{y} \in \{ 1, 2, ..., K \} ^M \subset \mathbb{R}^{M} \\
+                    \mathbb{\mu} \in \mathbb{R}^{S\times N}, \mathbb{\Sigma} \in \mathbb{R}^{S\times N\times N}, \mathbb{\Theta} \in
+                    \mathbb{R}^{M\times K}, (S=K^M) \\
+                    \mathbb{\mu_y} \in \mathbb{R}^{N}, \mathbb{\Sigma_y} \in \mathbb{R}^{N\times N}
+                    $
+                    <div style="margin-top:15px"></div>
+                    <figure class="figure">
+                        <img src="figs/single_gc_distribution.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom:10px;" width="50%">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Visualization of a Gaussian-categorical distribution with a single variable
+                                ($N = 1, M = 1, K = 4,$ and $S = 4$).
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <h4>Gaussian-categorical Diffusion Process</h4>
+                <center>
+                    <figure class="figure">
+                        <img src="../teaser/gcdp.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom:10px;" width="75%">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Illustration of the Gaussian-categorical diffusion process on the image-layout distribution of MM CelebA-HQ.
+                                We define a Gaussian-categorical diffusion process for modeling joint image-layout distributions, which is
+                                the first approach to unify two diffusion processes for image-layout generation.
+                                Derivation of the objective function is available in the paper.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+
+                <hr>
+                <!-- Qualitative results -->
+                <h3>Qualitative results</h3>
+                <center>
+                    <figure class="figure">
+                        <img src="figs/quali.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom:10px;">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Examples of text-guided generation of image-layout pairs from the Gaussian-categorical diffusion trained on
+                                MM CelebA-HQ100 and Cityscapes. The text descriptions on the bottom are given as conditions to generate the
+                                image-label pairs.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <hr>
+                <!-- Quantitative results -->
+                <h3>Quantitative results</h3>
+                <center>
+                    <figure class="figure">
+                        <img src="figs/quanti_cityscapes.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom:10px;">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                (a) FID-Semantic Recall trade-off in the Cityscapes dataset. (b) Semantic Recall for minor classes. Semantic
+                                Recall is measured using the HRNet-w48 model. (c) Proportion of each semantic class in the entire Cityscapes
+                                dataset. Class proportion is compared in log-scale for visibility.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <hr>
+                <!-- Analyzing the internal representation -->
+                <h3>Analyzing the internal representation</h3>
+                <center>
+                    <figure class="figure">
+                        <img src="figs/viz_internal_features.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom:10px;" width="75%">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Visualization of clustering results between the internal features of the Gaussian-categorical diffusion and
+                                the Gaussian diffusion.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <hr>
+                <!-- Cross-modal outpainting -->
+                <h3>Cross-modal outpainting</h3>
+                <center>
+                    <figure class="figure">
+                        <img src="figs/cross_modal_outpainting.png" class="figure-img img-fluid" alt="Responsive image"
+                            style="margin:0px;margin-bottom:10px;">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Cross-model outpainting for (a) text-guided image-to-layout generation and (b) text-guided layout-to-image
+                                generation. Segmentation layouts are generated with $n = 1$ resampling steps and images are generated with 
+                                $n = 5$ resampling steps for each timestep.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <hr>
+                <!-- Section -->
+                <!-- <h3>Section</h3>
+                <center>
+                    <figure class="figure">
+                        <img src="" class="figure-img img-fluid" alt="Responsive image" style="margin:0px;margin-bottom:10px;">
+                        <figcaption class="figure-caption text-justify">
+                            <center>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae maxime porro tempore odit error veritatis
+                                iure molestias. In magni, veniam ad explicabo mollitia velit eum vero odit, architecto repellat
+                                reiciendis.
+                            </center>
+                        </figcaption>
+                    </figure>
+                </center>
+                <hr> -->
+                <!-- Citation -->
+                <h3>Citation</h3>
+                <pre><code>@InProceedings{
+    will be updated.
+}</code></pre>
+                <hr>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({
+                tex2jax: { inlineMath: [['$', '$']], displayMath: [['$$', '$$']] }
+            });
+        </script>
+    <script src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</body>
+
+</html>
