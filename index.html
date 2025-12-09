@@ -53,9 +53,12 @@
         <div>
           <h3 class="subtitle">About Me</h3>
           <p class="lead">
-            I am a Ph.D. student at <a href="https://davian.kaist.ac.kr/">Data and Visual Analytics Lab (DAVIAN)</a>
-            in Korea Advanced Institute of Science and Technology (KAIST)
-            advised by Professor <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
+            I am a Ph.D. student at the
+            <a href="https://davian.kaist.ac.kr/">Data and Visual Analytics Lab (DAVIAN)</a>
+            in KAIST AI, advised by Professor
+            <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
+            My research interests include generative models, computer vision, and their applications.
+            Recently, I have been focusing on applying generative models to robotics.
           </p>
         </div>
         <!-- News -->
@@ -63,6 +66,8 @@
         <div>
           <h3 class="subtitle">News</h3>
           <p class="lead">
+            <span class="font-weight-bold">[Nov. 2026]</span> SphereDiff accepted as an <span style="color:red">Oral Presentation</span> at
+            <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.</br>
             <span class="font-weight-bold">[Mar. 2024]</span> I started internship at
             <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.</br>
             <span class="font-weight-bold">[Feb. 2024]</span> StableVITON accepted to
@@ -77,24 +82,49 @@
         <hr>
         <div>
           <h3 class="subtitle">Selected Publications</h3>
-          <!-- SphereDiff -->
+          <!-- ACG -->
           <div class="row">
             <div class="col-sm-4">
-              <video class="figure-img img-fluid" controls style="margin:20px 0px;">
-                <source src="./research/teaser/spherediff.mp4" type="video/mp4">
+              <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
+                src="https://github.com/user-attachments/assets/7b60dee5-864a-4e6b-9ad4-3b7ee868c803" type="video/mp4">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <p class="lead">
                 <span class="font-weight-bold">
                   <span style="color: red;">[NEW]</span>
+                  ACG: Action Coherence Guidance for Flow-based VLA models
+                </span><br>
+                <span class="font-weight-bold">Minho Park*</span>, Kinam Kim*, Junha Hyung, Hyojin Jang, Hoiyeong Jin, Jooyeol Yun, Hojoon
+                Lee, and Jaegul Choo<br>
+                <i>arXiv 2025</i><br>
+                <a href="https://arxiv.org/abs/2510.22201">[Paper]</a>
+                <a href="https://github.com/davian-robotics/ACG">[Code]</a>
+                <a href="https://davian-robotics.github.io/ACG">[Project Page]</a>
+                <a href="https://huggingface.co/collections/DAVIAN-Robotics/gr00t-n1-2b-post-trained-models">[HuggingFace]</a>
+                <a href="https://www.youtube.com/watch?v=Fi6VpnPETYU">[Youtube]</a>
+              </p>
+            </div>
+          </div>
+          <!-- SphereDiff -->
+          <div class="row">
+            <div class="col-sm-4">
+              <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
+                src="https://pmh9960.github.io/SphereDiff/static/videos/1_hunyuan_storm.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
                   SphereDiff: Tuning-free Omnidirectional Panoramic Image and Video Generation via Spherical Latent Representation
                 </span><br>
                 <span class="font-weight-bold">Minho Park*</span>, Taewoong Kang*, Jooyeol Yun, Sungwon Hwang, and Jaegul Choo<br>
-                <i>arXiv, 2025</i><br>
-                <a href="">[Paper]</a>
+                <i>AAAI 2026, Singapore.</i> <span class="font-weight-bold" style="color: red;">(Oral Presentation)</span><br>
+                <a href="https://arxiv.org/abs/2504.14396">[Paper]</a>
                 <a href="https://github.com/pmh9960/SphereDiff">[Code]</a>
-                <a href="https://pmh9960.github.io/research/SphereDiff">[Project page]</a>
+                <a href="https://pmh9960.github.io/SphereDiff">[Project page]</a>
               </p>
             </div>
           </div>
@@ -106,18 +136,17 @@
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <p class="lead">
                 <span class="font-weight-bold">
-                  <span style="color: red;">[NEW]</span>
                   Concept-Aware LoRA for Domain-Aligned Segmentation Dataset Generation
                 </span><br>
-                <span class="font-weight-bold">Minho Park*</span>, Sunghyun Park, Jungsoo Lee, Hyojin Park, Kyuwoong Hwang,
+                <span class="font-weight-bold">Minho Park</span>, Sunghyun Park, Jungsoo Lee, Hyojin Park, Kyuwoong Hwang,
                 Fatih Porikli, Jaegul Choo, and Sungha Choi<br>
                 <i>Work done during an internship at Qualcomm AI Research.</i><br>
-                <i>arXiv, 2025</i><br>
+                <i>arXiv 2025</i><br>
                 <a href="https://arxiv.org/abs/2503.22172">[Paper]</a>
               </p>
             </div>
           </div>
-          <hr>
+          <!-- <hr> -->
           <!-- RegFT -->
           <!-- <div class="row">
             <div class="col-sm-4">
@@ -128,7 +157,7 @@
                 <span class="font-weight-bold">Regularized Training with Generated Datasets for Name-Only Transfer of Vision-Language Models
                 </span><br>
                 <span class="font-weight-bold">Minho Park</span>, Sunghyun Park, Jooyeol Yun, and Jaegul Choo<br>
-                <i>arXiv, 2024</i><br>
+                <i>arXiv 2024</i><br>
                 <a href="https://arxiv.org/abs/2406.05432">[Paper]</a>
                 <a href="https://github.com/pmh9960/regft-for-gen">[Code]</a>
               </p>
@@ -144,7 +173,7 @@
                 <span class="font-weight-bold">StableVITON: Learning Semantic Correspondence
                   with Latent Diffusion Model for Virtual Try-On</span><br>
                 Jeongho Kim, Gyojung Gu, <span class="font-weight-bold">Minho Park</span>, Sunghyun Park, and Jaegul Choo<br>
-                <i>Computer Vision and Pattern Recognition (CVPR), 2024, Seattle WA, USA</i><br>
+                <i>CVPR 2024, Seattle WA, USA.</i><br>
                 <a href="https://arxiv.org/abs/2312.01725">[Paper]</a>
                 <a href="https://github.com/rlawjdghek/StableVITON">[Code]</a>
                 <a href="https://rlawjdghek.github.io/StableVITON/">[Project page]</a>
@@ -161,7 +190,7 @@
                 <span class="font-weight-bold">Learning to Generate Semantic Layouts for Higher Text-Image Correspondence in Text-to-Image
                   Synthesis</span><br>
                 <span class="font-weight-bold">Minho Park*</span>, Jooyeol Yun*, Seunghwan Choi, and Jaegul Choo<br>
-                <i>International Conference on Computer Vision (ICCV), 2023, Paris, France.</i><br>
+                <i>ICCV 2023, Paris, France.</i><br>
                 <a href="https://arxiv.org/abs/2308.08157">[Paper]</a>
                 <a href="https://github.com/pmh9960/GCDP/">[Code]</a>
                 <a href="https://pmh9960.github.io/research/GCDP/">[Project page]</a>
@@ -178,7 +207,7 @@
                 <span class="font-weight-bold">iColoriT: Towards Propagating Local Hint to the Right Region in Interactive Colorization by
                   Leveraging Vision Transformer</span><br>
                 Jooyeol Yun*, Sanghyeon Lee*, <span class="font-weight-bold">Minho Park*</span>, and Jaegul Choo<br>
-                <i>Winter Conference on Applications of Computer Vision (WACV), 2023, Waikoloa, Hawaii.</i><br>
+                <i>WACV 2023, Waikoloa, Hawaii.</i><br>
                 <a href="https://arxiv.org/abs/2207.06831">[Paper]</a>
                 <a href="https://github.com/pmh9960/iColoriT">[Code]</a>
                 <a href="https://pmh9960.github.io/research/iColoriT/">[Project page]</a>
