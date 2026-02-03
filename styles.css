@@ -34,3 +34,36 @@
   height: 100%;
   object-fit: cover;
 }
+
+.news-item {
+  display: flex;
+  margin-bottom: 0.25rem;
+  align-items: baseline;
+}
+
+.date-label {
+  display: flex;
+  flex: 0 0 5.2em; /* Total fixed width */
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.date-month {
+  width: 1.3em; /* Fixed width for "Feb." */
+  text-align: left;
+}
+
+.date-separator {
+  width: 1em; /* Fixed width for "2026" */
+  text-align: center;
+  font-weight: normal;
+}
+
+.date-year {
+  width: 3.5em; /* Fixed width for "2026" */
+  text-align: right;
+}
+
+.work-experience .date-label {
+  flex: 0 0 11em; /* Wider for date ranges */
+}

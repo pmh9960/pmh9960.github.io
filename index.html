@@ -10,9 +10,13 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <title>Minho Park</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script type="text/javascript" async="" src="./sources/analytics.js"></script>
+  <script src="./sources/functions.js"></script>
   <script async="" src="./sources/js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -36,8 +40,9 @@
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <header>
                 <h3 class="title">Minho Park </h3>
-                <h3 class="ttitle">Ph.D. Student <br>
-                  KAIST<br>
+                <h3 class="ttitle">
+                  Ph.D. Student<br>
+                  KAIST AI<br>
                   m.park@kaist.ac.kr</h3>
                 <div class="links">
                   <a href="https://scholar.google.com/citations?user=gsCV7hMAAAAJ">[Google Scholar]</a>
@@ -65,18 +70,16 @@
         <hr>
         <div>
           <h3 class="subtitle">News</h3>
-          <p class="lead">
-            <span class="font-weight-bold">[Nov. 2026]</span> SphereDiff accepted as an <span style="color:red">Oral Presentation</span> at
-            <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.</br>
-            <span class="font-weight-bold">[Mar. 2024]</span> I started internship at
-            <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.</br>
-            <span class="font-weight-bold">[Feb. 2024]</span> StableVITON accepted to
-            <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.</br>
-            <span class="font-weight-bold">[Jul. 2023]</span> Gaussian-categorical Diffusion Process paper accepted to
-            <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>.</br>
-            <span class="font-weight-bold">[Jul. 2022]</span> iColoriT paper accepted to
-            <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.</br>
-          </p>
+          <div class="lead" id="news-container">
+          </div>
+          <script>
+            addNewsItem('news-container', 'Feb.', '2026', 'ACG accepted at <a href="https://2026.ieee-icra.org/">ICRA 2026</a>.');
+            addNewsItem('news-container', 'Nov.', '2025', 'SphereDiff accepted as an <span style="color:red">Oral Presentation</span> at <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.');
+            addNewsItem('news-container', 'Mar.', '2024', 'I started internship at <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.');
+            addNewsItem('news-container', 'Feb.', '2024', 'StableVITON accepted to <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.');
+            addNewsItem('news-container', 'Jul.', '2023', 'Gaussian-categorical Diffusion Process paper accepted to <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>.');
+            addNewsItem('news-container', 'Jul.', '2022', 'iColoriT paper accepted to <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.');
+          </script>
         </div>
         <!-- Publications -->
         <hr>
@@ -98,7 +101,7 @@
                 </span><br>
                 <span class="font-weight-bold">Minho Park*</span>, Kinam Kim*, Junha Hyung, Hyojin Jang, Hoiyeong Jin, Jooyeol Yun, Hojoon
                 Lee, and Jaegul Choo<br>
-                <i>arXiv 2025</i><br>
+                <i>ICRA 2026, Vienna, Austria.</i><br>
                 <a href="https://arxiv.org/abs/2510.22201">[Paper]</a>
                 <a href="https://github.com/davian-robotics/ACG">[Code]</a>
                 <a href="https://davian-robotics.github.io/ACG">[Project Page]</a>
@@ -134,8 +137,8 @@
           <div class="row">
             <div class="col-sm-4">
               <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
-                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
-                src="./research/teaser/phuma-teaser-1.mp4" type="video/mp4">
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma-teaser-1.mp4"
+                type="video/mp4">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
@@ -271,10 +274,11 @@
         <!-- Work Experience -->
         <div>
           <h3 class="subtitle">Work Experience</h3>
-          <p class="lead">
-            <span class="font-weight-bold">[Mar. 2024 - Aug. 2024]</span>
-            Qualcomm AI Research, Research Intern</br>
-          </p>
+          <div class="lead work-experience" id="work-container">
+          </div>
+          <script>
+            addWorkItem('work-container', 'Mar.', '2024', 'Aug.', '2024', 'Qualcomm AI Research, Research Intern');
+          </script>
         </div>
         <hr>
 
@@ -286,19 +290,16 @@
           </p>
           <!-- Teaching Experience -->
           <h4>Talks</h4>
-          <p class="lead">
-            <span class="font-weight-bold">[Feb. 2024]</span> Data generation via generative models</br>
-            <span class="font-weight-bold">[Dec. 2023]</span> Various Types of Diffusion Process
-            <a href="talks/various_types_of_diffusion_models.pdf">[pdf]</a></br>
-            <span class="font-weight-bold">[Sep. 2023]</span> Segment Anything (Kor.)
-            <a href="talks/segment_anything.pdf">[pdf]</a></br>
-            <span class="font-weight-bold">[Jul. 2023]</span> Classification with Foundation Models (Kor.)
-            <a href="talks/classification_with_foundation_models.pdf">[pdf]</a></br>
-            <span class="font-weight-bold">[Jun. 2023]</span> Consistency Models and BOOT (Kor.)
-            <a href="talks/consistency_models_and_boot.pdf">[pdf]</a></br>
-            <span class="font-weight-bold">[Jan. 2023]</span> DDPM
-            <a href="talks/ddpm.pdf">[pdf]</a></br>
-          </p>
+          <div class="lead" id="talks-container">
+          </div>
+          <script>
+            addNewsItem('talks-container', 'Feb.', '2024', 'Data generation via generative models');
+            addNewsItem('talks-container', 'Dec.', '2023', 'Various Types of Diffusion Process <a href="talks/various_types_of_diffusion_models.pdf">[pdf]</a>');
+            addNewsItem('talks-container', 'Sep.', '2023', 'Segment Anything (Kor.) <a href="talks/segment_anything.pdf">[pdf]</a>');
+            addNewsItem('talks-container', 'Jul.', '2023', 'Classification with Foundation Models (Kor.) <a href="talks/classification_with_foundation_models.pdf">[pdf]</a>');
+            addNewsItem('talks-container', 'Jun.', '2023', 'Consistency Models and BOOT (Kor.) <a href="talks/consistency_models_and_boot.pdf">[pdf]</a>');
+            addNewsItem('talks-container', 'Jan.', '2023', 'DDPM <a href="talks/ddpm.pdf">[pdf]</a>');
+          </script>
 
           <!-- <h4>Teaching Assistant</h4>
           <p class="lead">
