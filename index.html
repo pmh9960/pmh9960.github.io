@@ -35,7 +35,7 @@
         <div>
           <div class="row">
             <div class="profile-box col-sm-4">
-              <img src="./images/profile.jpg" alt="" class="profile figure-img img-fluid" style="margin:10px;">
+              <img src="./images/minho-260711-square-1024.jpg" alt="" class="profile figure-img img-fluid" style="margin:10px;">
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <header>
@@ -73,6 +73,7 @@
           <div class="lead" id="news-container">
           </div>
           <script>
+            addNewsItem('news-container', 'Jun.', '2026', '3D HAMSTER accepted to <a href="https://iros2026.org/">IROS 2026</a>.');
             addNewsItem('news-container', 'Feb.', '2026', 'CA-LoRA and EgoX accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a>.');
             addNewsItem('news-container', 'Feb.', '2026', 'ACG accepted to <a href="https://2026.ieee-icra.org/">ICRA 2026</a>.');
             addNewsItem('news-container', 'Nov.', '2025', 'SphereDiff accepted as an <span style="color:red">Oral Presentation</span> at <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.');
@@ -86,10 +87,35 @@
         <hr>
         <div>
           <h3 class="subtitle">Selected Publications</h3>
+          <!-- 3D HAMSTER -->
+          <div class="row">
+            <div class="col-sm-4">
+              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
+                src="https://davian-robotics.github.io/3D_HAMSTER/static/videos/3d_trajectory_1.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
+                  <span style="color: red;">[NEW]</span>
+                  3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory
+                  Guidance
+                </span><br>
+                Dongyoon Hwang*, Byungkun Lee*, Dongjin Kim*, Hyojin Jang, Hoiyeong Jin, Jueun Mun,
+                <span class="font-weight-bold">Minho Park</span>, Hojoon Lee, Hyunseung Kim, and Jaegul Choo<br>
+                <i>IROS 2026.</i><br>
+                <a href="https://arxiv.org/abs/2606.31329">[Paper]</a>
+                <a href="https://github.com/DAVIAN-Robotics/3D_HAMSTER">[Code]</a>
+                <a href="https://davian-robotics.github.io/3D_HAMSTER/">[Project Page]</a>
+                <a href="https://huggingface.co/DAVIAN-Robotics/3D_HAMSTER">[HF Models]</a>
+              </p>
+            </div>
+          </div>
           <!-- ACG -->
           <div class="row">
             <div class="col-sm-4">
-              <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
+              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
                 src="https://github.com/user-attachments/assets/7b60dee5-864a-4e6b-9ad4-3b7ee868c803" type="video/mp4">
               </video>
@@ -97,7 +123,6 @@
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <p class="lead">
                 <span class="font-weight-bold">
-                  <span style="color: red;">[NEW]</span>
                   ACG: Action Coherence Guidance for Flow-based VLA models
                 </span><br>
                 <span class="font-weight-bold">Minho Park*</span>, Kinam Kim*, Junha Hyung, Hyojin Jang, Hoiyeong Jin, Jooyeol Yun, Hojoon
@@ -114,7 +139,7 @@
           <!-- EgoX -->
           <div class="row">
             <div class="col-sm-4">
-              <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
+              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
                 src="https://github.com/user-attachments/assets/5f599ad0-0922-414b-a8ab-e789da068efa" type="video/mp4">
               </video>
@@ -122,7 +147,6 @@
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <p class="lead">
                 <span class="font-weight-bold">
-                  <span style="color: red;">[NEW]</span>
                   EgoX: Egocentric Video Generation from a Single Exocentric Video
                 </span><br>
                 Taewoong Kang*, Kinam Kim*, Dohyeon Kim*, <span class="font-weight-bold">Minho Park</span>, Junha Hyung, and Jaegul Choo<br>
@@ -137,7 +161,7 @@
           <!-- PHUMA -->
           <div class="row">
             <div class="col-sm-4">
-              <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
+              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma-teaser-1.mp4"
                 type="video/mp4">
               </video>
@@ -145,7 +169,6 @@
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <p class="lead">
                 <span class="font-weight-bold">
-                  <span style="color: red;">[NEW]</span>
                   PHUMA: Physically-Grounded Humanoid Locomotion Dataset
                 </span><br>
                 Kyungmin Lee*, Sibeen Kim*, <span class="font-weight-bold">Minho Park</span>, Hyunseung Kim, Dongyoon Hwang, Hojoon Lee, and
@@ -161,7 +184,7 @@
           <!-- SphereDiff -->
           <div class="row">
             <div class="col-sm-4">
-              <video class="figure-img img-fluid" controls muted loop playsinline webkit-playsinline autoplay preload="metadata"
+              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
                 src="https://pmh9960.github.io/SphereDiff/static/videos/1_hunyuan_storm.mp4" type="video/mp4">
               </video>
