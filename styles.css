@@ -54,9 +54,29 @@
   margin: 2px 0 0 0;
 }
 
+/* Same trick as the link row: each item carries its own "·", and the line-start
+   ones are clipped, so a wrapped line never starts or ends with a dot. */
+.interests-wrap {
+  overflow: hidden;
+  margin-top: 2px;
+}
+
 .intro .interests {
+  display: flex;
+  flex-wrap: wrap;
   color: #888;
-  margin: 2px 0 0 0;
+  margin: 0 0 0 -1em;
+}
+
+.intro .interests span {
+  white-space: nowrap;
+}
+
+.intro .interests span::before {
+  content: "\00b7";
+  display: inline-block;
+  width: 1em;
+  text-align: center;
 }
 
 .intro-column {

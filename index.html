@@ -16,6 +16,10 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script type="text/javascript" async="" src="./sources/analytics.js"></script>
   <script src="./sources/functions.js"></script>
+  <script>
+    // [Show more] folding: true shows only the first items with a toggle, false lists everything.
+    const SHOW_MORE = { news: false, publications: false };
+  </script>
   <script async="" src="./sources/js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -36,7 +40,9 @@
             <div class="col-sm-6 intro-column">
               <h1 class="name">Minho Park</h1>
               <p class="position">Postdoctoral Researcher, KAIST AI</p>
-              <p class="interests">Robot Learning &middot; Generative Models &middot; Computer Vision</p>
+              <div class="interests-wrap">
+                <p class="interests"><span>Robot Learning</span><span>Reinforcement Learning</span><span>Generative Models</span><span>Data Generation</span></p>
+              </div>
             </div>
             <div class="col-sm-6 intro-column">
               <p class="institute-logos">
@@ -93,7 +99,7 @@
             addNewsItem('news-container', 'Feb.', '2024', 'StableVITON accepted to <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.');
             addNewsItem('news-container', 'Jul.', '2023', 'Gaussian-categorical Diffusion Process paper accepted to <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>.');
             addNewsItem('news-container', 'Jul.', '2022', 'iColoriT paper accepted to <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.');
-            collapseItems('news-container', 5);
+            if (SHOW_MORE.news) collapseItems('news-container', 5);
           </script>
         </div>
         <!-- Publications -->
@@ -385,7 +391,7 @@
             </div>
           </div>
           <script>
-            collapseItems('pub-container', Math.max(5, countThroughLastNew('pub-container', '.row')), '.row');
+            if (SHOW_MORE.publications) collapseItems('pub-container', Math.max(5, countThroughLastNew('pub-container', '.row')), '.row');
           </script>
         </div>
         <hr>
