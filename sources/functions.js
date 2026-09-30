@@ -43,11 +43,16 @@ function addWorkItem(containerId, startMonth, startYear, endMonth, endYear, html
     return s;
   };
 
-  dateLabel.appendChild(createSpan(startMonth, 'date-month'));
-  dateLabel.appendChild(createSpan(startYear, 'date-year'));
-  dateLabel.appendChild(createSpan(' – ', 'date-separator')); // En dash
-  dateLabel.appendChild(createSpan(endMonth, 'date-month'));
-  dateLabel.appendChild(createSpan(endYear, 'date-year'));
+  // Start and end are grouped so narrow screens can stack them ("– end" on a new line).
+  const startGroup = createSpan('', 'date-group');
+  startGroup.appendChild(createSpan(startMonth, 'date-month'));
+  startGroup.appendChild(createSpan(startYear, 'date-year'));
+  const endGroup = createSpan('', 'date-group');
+  endGroup.appendChild(createSpan(' – ', 'date-separator')); // En dash
+  endGroup.appendChild(createSpan(endMonth, 'date-month'));
+  endGroup.appendChild(createSpan(endYear, 'date-year'));
+  dateLabel.appendChild(startGroup);
+  dateLabel.appendChild(endGroup);
   
   const content = document.createElement('div');
   content.innerHTML = htmlContent;
@@ -56,4 +61,40 @@ function addWorkItem(containerId, startMonth, startYear, endMonth, endYear, html
   item.appendChild(content);
   
   container.appendChild(item);
+}
+
+function collapseItems(containerId, visibleCount, itemSelector) {
+  const container = document.getElementById(containerId);
+  const all = itemSelector
+    ? Array.from(container.querySelectorAll(':scope > ' + itemSelector))
+    : Array.from(container.children);
+  const items = all.slice(visibleCount);
+  if (items.length === 0) return;
+
+  const hidden = document.createElement('div');
+  hidden.style.display = 'none';
+  container.insertBefore(hidden, items[0]);
+  items.forEach(item => hidden.appendChild(item));
+
+  const toggleWrap = document.createElement('div');
+  toggleWrap.className = 'lead';
+  const toggle = document.createElement('a');
+  toggle.href = '#';
+  toggle.textContent = '[Show more]';
+  toggle.addEventListener('click', e => {
+    e.preventDefault();
+    const expanded = hidden.style.display !== 'none';
+    hidden.style.display = expanded ? 'none' : '';
+    toggle.textContent = expanded ? '[Show more]' : '[Show less]';
+  });
+  toggleWrap.appendChild(toggle);
+  hidden.after(toggleWrap);
+}
+
+// Number of items up to and including the last one marked [NEW].
+function countThroughLastNew(containerId, itemSelector) {
+  const items = document.querySelectorAll('#' + containerId + ' > ' + itemSelector);
+  let last = -1;
+  items.forEach((item, i) => { if (item.textContent.includes('[NEW]')) last = i; });
+  return last + 1;
 }

@@ -14,12 +14,27 @@
 
 .title {
   font-size: 2.2rem;
+  font-weight: 600;
   text-align: left;
+  margin-bottom: 0.35rem;
 }
 
-.ttitle {
+.role {
   font-size: 1.2rem;
-  text-align: left;
+  margin-bottom: 0.1rem;
+}
+
+.interests {
+  font-size: 1rem;
+  color: #6c757d;
+  margin-bottom: 0.75rem;
+}
+
+.email {
+  font-size: 0.95rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+  margin-bottom: 0;
 }
 
 .profile {
@@ -60,4 +75,16 @@
 
 .work-experience .date-label {
   flex: 0 0 11em; /* Wider for date ranges */
+}
+
+.date-group {
+  display: flex;
+}
+
+/* On phones, put "– end" on its own line so the date column stays narrow. */
+@media (max-width: 576px) {
+  .work-experience .date-label {
+    flex: 0 0 6.5em;
+    flex-direction: column;
+  }
 }

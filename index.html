@@ -39,16 +39,17 @@
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <header>
-                <h3 class="title">Minho Park </h3>
-                <h3 class="ttitle">
-                  Ph.D. Student<br>
-                  KAIST AI<br>
-                  m.park@kaist.ac.kr</h3>
+                <h3 class="title">Minho Park</h3>
+                <p class="role">Postdoctoral Researcher @ KAIST AI</p>
+                <p class="interests">Robot Learning &middot; Generative Models &middot; Computer Vision</p>
                 <div class="links">
                   <a href="https://scholar.google.com/citations?user=gsCV7hMAAAAJ">[Google Scholar]</a>
                   <a href="https://github.com/pmh9960">[Github]</a>
+                  <a href="https://x.com/mpark1999">[X]</a>
+                  <a href="https://www.linkedin.com/in/minho-park-553829139">[LinkedIn]</a>
                   <a href="./assets/cv_minhopark.pdf">[CV]</a>
                 </div>
+                <p class="email">m.park@kaist.ac.kr</p>
               </header>
             </div>
           </div>
@@ -58,12 +59,14 @@
         <div>
           <h3 class="subtitle">About Me</h3>
           <p class="lead">
-            I am a Ph.D. student at the
-            <a href="https://davian.kaist.ac.kr/">Data and Visual Analytics Lab (DAVIAN)</a>
-            in KAIST AI, advised by Professor
-            <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>.
-            My research interests include generative models, computer vision, and their applications.
-            Recently, I have been focusing on applying generative models to robotics.
+            I am a postdoctoral researcher at the
+            <a href="https://davian.kaist.ac.kr/">Data and Visual Analytics Lab (DAVIAN)</a>, KAIST AI,
+            working with Professor <a href="https://sites.google.com/site/jaegulchoo/">Jaegul Choo</a>,
+            who also advised my Ph.D.
+            My research asks how generated data can stand in for costly human effort in training AI systems.
+            I started with diffusion models that generate images, videos, and labeled datasets for visual perception,
+            and now work on robot learning: generating diverse robot demonstrations with reinforcement learning,
+            and building vision-language-action (VLA) models that act reliably in the real world.
           </p>
         </div>
         <!-- News -->
@@ -73,20 +76,127 @@
           <div class="lead" id="news-container">
           </div>
           <script>
+            addNewsItem('news-container', 'Sep.', '2026', '2 papers accepted to <a href="https://www.corl.org/">CoRL 2026</a>: PAM and PHUMA (<span style="color:red">Spotlight</span>).');
+            addNewsItem('news-container', 'Aug.', '2026', 'I received my Ph.D. from KAIST AI and am continuing at <a href="https://davian.kaist.ac.kr/">DAVIAN</a> as a postdoctoral researcher.');
+            addNewsItem('news-container', 'Jul.', '2026', 'FlashSAC received the <span style="color:red">Outstanding Paper Award</span> at <a href="https://roboticsconference.org/">RSS 2026</a>.');
             addNewsItem('news-container', 'Jun.', '2026', '3D HAMSTER accepted to <a href="https://iros2026.org/">IROS 2026</a>.');
-            addNewsItem('news-container', 'Feb.', '2026', 'CA-LoRA and EgoX accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a>.');
+            addNewsItem('news-container', 'Feb.', '2026', '2 papers accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a>: CA-LoRA and EgoX.');
             addNewsItem('news-container', 'Feb.', '2026', 'ACG accepted to <a href="https://2026.ieee-icra.org/">ICRA 2026</a>.');
             addNewsItem('news-container', 'Nov.', '2025', 'SphereDiff accepted as an <span style="color:red">Oral Presentation</span> at <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.');
             addNewsItem('news-container', 'Mar.', '2024', 'I started internship at <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.');
             addNewsItem('news-container', 'Feb.', '2024', 'StableVITON accepted to <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.');
             addNewsItem('news-container', 'Jul.', '2023', 'Gaussian-categorical Diffusion Process paper accepted to <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>.');
             addNewsItem('news-container', 'Jul.', '2022', 'iColoriT paper accepted to <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.');
+            collapseItems('news-container', 5);
           </script>
         </div>
         <!-- Publications -->
         <hr>
-        <div>
+        <div id="pub-container">
           <h3 class="subtitle">Selected Publications</h3>
+          <!-- DiscoDemo -->
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="research/teaser/discodemo.png" alt="" class="figure-img img-fluid"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin:10px;">
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
+                  <span style="color: red;">[NEW]</span>
+                  DiscoDemo: Discovering Efficient and Diverse Robot Demonstrations for Imitation Learning
+                </span><br>
+                <span class="font-weight-bold">Minho Park*</span>, Kinam Kim*, Donghu Kim, Byungkun Lee, Dongyoon Hwang, Yongjae Shin,
+                Junha Hyung, Hojoon Lee&dagger;, and Jaegul Choo&dagger;<br>
+                <i>arXiv 2026</i><br>
+                <!-- TODO: add [Paper] once the arXiv ID is out -->
+              </p>
+            </div>
+          </div>
+          <!-- SeeR-VLA -->
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="research/teaser/seer_vla.png" alt="" class="figure-img img-fluid"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin:10px;">
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
+                  <span style="color: red;">[NEW]</span>
+                  See like a Robot: Robot-Centric Pointmaps for VLA Models
+                </span><br>
+                Byungkun Lee, Dongyoon Hwang, Dongjin Kim, Hojoon Lee, Hyunseung Kim, Jaegul Choo, and
+                <span class="font-weight-bold">Minho Park</span><br>
+                <i>arXiv 2026</i><br>
+                <a href="https://arxiv.org/abs/2607.11498">[Paper]</a>
+              </p>
+            </div>
+          </div>
+          <!-- PAM -->
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="research/teaser/pam.png" alt="" class="figure-img img-fluid"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin:10px;">
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
+                  <span style="color: red;">[NEW]</span>
+                  Procedural Assistance Memory for Proactive Robot
+                </span><br>
+                Dohyun Lee*, <span class="font-weight-bold">Minho Park*</span>, Jeonghoon Park, Dongyoon Hwang, Junha Hyung, Sungwon Hwang,
+                Byungkun Lee, and Jaegul Choo<br>
+                <i>CoRL 2026.</i><br>
+                <a href="https://github.com/DAVIAN-Robotics/PAM">[Code]</a>
+                <a href="https://davian-robotics.github.io/PAM">[Project Page]</a>
+              </p>
+            </div>
+          </div>
+          <!-- PHUMA -->
+          <div class="row">
+            <div class="col-sm-4">
+              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma-teaser-1.mp4"
+                type="video/mp4">
+              </video>
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
+                  <span style="color: red;">[NEW]</span>
+                  PHUMA: Physically Reliable Humanoid Locomotion Dataset
+                </span><br>
+                Kyungmin Lee*, Sibeen Kim*, Youngdo Lee, <span class="font-weight-bold">Minho Park</span>, Hyunseung Kim, Dongyoon Hwang,
+                Donghu Kim, Hojoon Lee, and Jaegul Choo<br>
+                <i>CoRL 2026.</i> <span class="font-weight-bold" style="color: red;">(Spotlight)</span><br>
+                <a href="https://arxiv.org/abs/2510.26236">[Paper]</a>
+                <a href="https://github.com/DAVIAN-Robotics/PHUMA">[Code]</a>
+                <a href="https://davian-robotics.github.io/PHUMA">[Project Page]</a>
+                <a href="https://huggingface.co/datasets/DAVIAN-Robotics/PHUMA">[HF Datasets]</a>
+              </p>
+            </div>
+          </div>
+          <!-- FlashSAC -->
+          <div class="row">
+            <div class="col-sm-4">
+              <img src="research/teaser/flashsac.png" alt="" class="figure-img img-fluid"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin:10px;">
+            </div>
+            <div class="col" style="margin-top: auto; margin-bottom: auto;">
+              <p class="lead">
+                <span class="font-weight-bold">
+                  <span style="color: red;">[NEW]</span>
+                  FlashSAC: Fast and Stable Off-Policy Reinforcement Learning for High-Dimensional Robot Control
+                </span><br>
+                Donghu Kim*, Youngdo Lee*, <span class="font-weight-bold">Minho Park</span>, Kinam Kim, I Made Aswin Nahendra, Takuma Seno,
+                Sehee Min, Daniel Palenicek, Florian Vogt, Danica Kragic, Jan Peters, Jaegul Choo, and Hojoon Lee<br>
+                <i>RSS 2026.</i> <span class="font-weight-bold" style="color: red;">(Outstanding Paper Award)</span><br>
+                <a href="https://arxiv.org/abs/2604.04539">[Paper]</a>
+                <a href="https://github.com/Holiday-Robot/FlashSAC">[Code]</a>
+                <a href="https://holiday-robot.github.io/FlashSAC/">[Project Page]</a>
+              </p>
+            </div>
+          </div>
           <!-- 3D HAMSTER -->
           <div class="row">
             <div class="col-sm-4">
@@ -98,7 +208,6 @@
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
               <p class="lead">
                 <span class="font-weight-bold">
-                  <span style="color: red;">[NEW]</span>
                   3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory
                   Guidance
                 </span><br>
@@ -126,7 +235,7 @@
                   ACG: Action Coherence Guidance for Flow-based VLA models
                 </span><br>
                 <span class="font-weight-bold">Minho Park*</span>, Kinam Kim*, Junha Hyung, Hyojin Jang, Hoiyeong Jin, Jooyeol Yun, Hojoon
-                Lee, and Jaegul Choo<br>
+                Lee&dagger;, and Jaegul Choo&dagger;<br>
                 <i>ICRA 2026, Vienna, Austria.</i><br>
                 <a href="https://arxiv.org/abs/2510.22201">[Paper]</a>
                 <a href="https://github.com/davian-robotics/ACG">[Code]</a>
@@ -155,29 +264,6 @@
                 <a href="https://github.com/davian-robotics/EgoX">[Code]</a>
                 <a href="https://keh0t0.github.io/EgoX/">[Project Page]</a>
                 <a href="https://huggingface.co/DAVIAN-Robotics/EgoX">[HF Models]</a>
-              </p>
-            </div>
-          </div>
-          <!-- PHUMA -->
-          <div class="row">
-            <div class="col-sm-4">
-              <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
-                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma-teaser-1.mp4"
-                type="video/mp4">
-              </video>
-            </div>
-            <div class="col" style="margin-top: auto; margin-bottom: auto;">
-              <p class="lead">
-                <span class="font-weight-bold">
-                  PHUMA: Physically-Grounded Humanoid Locomotion Dataset
-                </span><br>
-                Kyungmin Lee*, Sibeen Kim*, <span class="font-weight-bold">Minho Park</span>, Hyunseung Kim, Dongyoon Hwang, Hojoon Lee, and
-                Jaegul Choo<br>
-                <i>arXiv 2025</i><br>
-                <a href="https://arxiv.org/abs/2510.26236">[Paper]</a>
-                <a href="https://github.com/DAVIAN-Robotics/PHUMA">[Code]</a>
-                <a href="https://davian-robotics.github.io/PHUMA">[Project Page]</a>
-                <a href="https://huggingface.co/datasets/DAVIAN-Robotics/PHUMA">[HF Datasets]</a>
               </p>
             </div>
           </div>
@@ -292,6 +378,9 @@
               </p>
             </div>
           </div>
+          <script>
+            collapseItems('pub-container', Math.max(5, countThroughLastNew('pub-container', '.row')), '.row');
+          </script>
         </div>
         <hr>
 
@@ -301,6 +390,7 @@
           <div class="lead work-experience" id="work-container">
           </div>
           <script>
+            addWorkItem('work-container', 'Sep.', '2026', 'Present', '', 'KAIST AI, Postdoctoral Researcher (InnoCORE Postdoctoral Fellow)');
             addWorkItem('work-container', 'Mar.', '2024', 'Aug.', '2024', 'Qualcomm AI Research, Research Intern');
           </script>
         </div>
@@ -310,7 +400,7 @@
           <h3 class="subtitle">Academic Activities</h3>
           <!-- Conference Reviewers -->
           <p class="lead">
-            <span class="font-weight-bold">Conference Reviewers:</span> CVPR, ICCV, ICLR, NeurIPS, ICML, AAAI, etc.
+            <span class="font-weight-bold">Conference Reviewers:</span> CVPR, ICCV, ICLR, NeurIPS, ICML, CoRL, AAAI, etc.
           </p>
           <!-- Teaching Experience -->
           <h4>Talks</h4>
