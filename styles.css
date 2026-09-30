@@ -12,36 +12,156 @@
   text-align: left;
 }
 
-.title {
-  font-size: 2.2rem;
-  font-weight: 600;
-  text-align: left;
-  margin-bottom: 0.35rem;
+/* Lato is self-hosted and preloaded, and font-display: block keeps the
+   fallback font from flashing before it swaps in on every reload. */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url(fonts/lato-400.woff2) format('woff2');
 }
 
-.role {
-  font-size: 1.2rem;
-  margin-bottom: 0.1rem;
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: block;
+  src: url(fonts/lato-700.woff2) format('woff2');
 }
 
-.interests {
-  font-size: 1rem;
-  color: #6c757d;
-  margin-bottom: 0.75rem;
+/* ---- intro: name, logos, text beside a circular photo ------------------ */
+
+.intro {
+  padding-top: 40px;
 }
 
-.email {
-  font-size: 0.95rem;
-  color: #6c757d;
-  margin-top: 0.25rem;
-  margin-bottom: 0;
+.intro,
+.intro p,
+.intro a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
 }
 
-.profile {
+.intro .name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  margin: 0;
+}
+
+.intro .position {
+  color: #666;
+  margin: 2px 0 0 0;
+}
+
+.intro .interests {
+  color: #888;
+  margin: 2px 0 0 0;
+}
+
+.intro-column {
+  margin: auto;
+}
+
+.intro-body {
+  margin-top: 10px;
+}
+
+/* The logo row ends flush with the photo's right edge (the photo is 90% of a
+   4/12 column, so its right inset is 1/30 of this 6/12 column) and grows to
+   the left. Each logo's flex-grow is its aspect ratio, so all of them render
+   at the same height and together fill the row. */
+.institute-logos {
+  display: flex;
+  align-items: center;
+  column-gap: 5%;
+  width: 90%;
+  margin: 0 3.333% 0 auto;
+}
+
+.institute-logos a {
+  flex-basis: 0;
+  min-width: 0;
+}
+
+.institute-logo-davian {
+  flex-grow: 3.015;
+}
+
+.institute-logo-davian-robotics {
+  flex-grow: 3.968;
+}
+
+.institute-logo-kaistai {
+  flex-grow: 3.846;
+}
+
+.institute-logos img {
+  display: block;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
+  height: auto;
+}
+
+.intro-photo {
+  width: 90%;
+  max-width: 100%;
+  margin: auto;
+  display: block;
+  clip-path: circle();
+}
+
+/* Each link carries its own "/" in front. The list is shifted left by one
+   separator width inside an overflow-hidden wrapper, so the separator that
+   starts a wrapped line is clipped instead of dangling. */
+.intro-links-wrap {
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.intro-links {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  margin: 0 0 0 -1.5em;
+}
+
+.intro-links a {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.intro-links a::before {
+  content: "/";
+  display: inline-block;
+  width: 1.5em;
+  text-align: center;
+  color: #999;
+}
+
+.intro-links svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 0.35em;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+@media (max-width: 576px) {
+  .intro {
+    padding-top: 20px;
+  }
+
+  .institute-logos {
+    width: 100%;
+    margin: 14px 0 12px 0;
+  }
+
+  .intro-photo {
+    width: 80%;
+    max-width: 200px;
+    padding: 10px 0;
+  }
 }
 
 .news-item {
