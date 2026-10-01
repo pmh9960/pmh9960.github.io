@@ -18,7 +18,7 @@
   <script src="./sources/functions.js"></script>
   <script>
     // [Show more] folding: true shows only the first items with a toggle, false lists everything.
-    const SHOW_MORE = { news: false, publications: false };
+    const SHOW_MORE = { news: true, publications: false };
   </script>
   <script async="" src="./sources/js"></script>
   <script>
@@ -72,7 +72,7 @@
                 <a href="https://scholar.google.com/citations?user=gsCV7hMAAAAJ"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>Google Scholar</a>
                 <a href="https://x.com/mpark1999"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>X</a>
                 <a href="https://www.linkedin.com/in/minho-park-553829139"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
-                <a href="https://github.com/pmh9960"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>Github</a>
+                <a href="https://github.com/pmh9960"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 0 1 3-.405c1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>GitHub</a>
               </p>
               </div>
             </div>
@@ -93,9 +93,9 @@
             addNewsItem('news-container', 'Jul.', '2026', 'FlashSAC received the <span style="color:red">Outstanding Paper Award</span> at <a href="https://roboticsconference.org/">RSS 2026</a>.');
             addNewsItem('news-container', 'Jun.', '2026', '3D HAMSTER accepted to <a href="https://iros2026.org/">IROS 2026</a>.');
             addNewsItem('news-container', 'Feb.', '2026', '2 papers accepted to <a href="https://cvpr.thecvf.com/">CVPR 2026</a>: CA-LoRA and EgoX.');
-            addNewsItem('news-container', 'Feb.', '2026', 'ACG accepted to <a href="https://2026.ieee-icra.org/">ICRA 2026</a>.');
+            addNewsItem('news-container', 'Jan.', '2026', 'ACG accepted to <a href="https://2026.ieee-icra.org/">ICRA 2026</a>.');
             addNewsItem('news-container', 'Nov.', '2025', 'SphereDiff accepted as an <span style="color:red">Oral Presentation</span> at <a href="https://aaai.org/conference/aaai/aaai-26/">AAAI 2026</a>.');
-            addNewsItem('news-container', 'Mar.', '2024', 'I started internship at <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.');
+            addNewsItem('news-container', 'Mar.', '2024', 'I began an internship at <a href="https://www.qualcomm.com/research/artificial-intelligence/ai-research">Qualcomm AI Research</a>.');
             addNewsItem('news-container', 'Feb.', '2024', 'StableVITON accepted to <a href="https://cvpr.thecvf.com/">CVPR 2024</a>.');
             addNewsItem('news-container', 'Jul.', '2023', 'Gaussian-categorical Diffusion Process paper accepted to <a href="https://iccv2023.thecvf.com/">ICCV 2023</a>.');
             addNewsItem('news-container', 'Jul.', '2022', 'iColoriT paper accepted to <a href="https://wacv2023.thecvf.com/">WACV 2023</a>.');
@@ -106,6 +106,7 @@
         <hr>
         <div id="pub-container">
           <h3 class="subtitle">Selected Publications</h3>
+          <p class="publication-note">* Equal contribution. &dagger; Corresponding authors.</p>
           <!-- DiscoDemo -->
           <div class="row">
             <div class="col-sm-4">
@@ -137,7 +138,7 @@
                   <span style="color: red;">[NEW]</span>
                   See like a Robot: Robot-Centric Pointmaps for VLA Models
                 </span><br>
-                Byungkun Lee, Dongyoon Hwang, Dongjin Kim, Hojoon Lee, Hyunseung Kim, Jaegul Choo, and
+                Byungkun Lee*, Dongyoon Hwang*, Dongjin Kim, Hojoon Lee, Hyunseung Kim, Jaegul Choo, and
                 <span class="font-weight-bold">Minho Park</span><br>
                 <i>arXiv 2026</i><br>
                 <a href="https://arxiv.org/abs/2607.11498">[Paper]</a>
@@ -169,7 +170,7 @@
             <div class="col-sm-4">
               <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma-teaser-1.mp4"
-                type="video/mp4">
+                type="video/mp4" poster="research/teaser/phuma-poster.jpg">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
@@ -214,7 +215,7 @@
             <div class="col-sm-4">
               <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
-                src="https://davian-robotics.github.io/3D_HAMSTER/static/videos/3d_trajectory_1.mp4" type="video/mp4">
+                src="https://davian-robotics.github.io/3D_HAMSTER/static/videos/3d_trajectory_1.mp4" type="video/mp4" poster="research/teaser/3d-hamster-poster.jpg">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
@@ -238,7 +239,7 @@
             <div class="col-sm-4">
               <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
-                src="https://github.com/user-attachments/assets/7b60dee5-864a-4e6b-9ad4-3b7ee868c803" type="video/mp4">
+                src="https://github.com/user-attachments/assets/7b60dee5-864a-4e6b-9ad4-3b7ee868c803" type="video/mp4" poster="research/teaser/acg-poster.jpg">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
@@ -252,8 +253,8 @@
                 <a href="https://arxiv.org/abs/2510.22201">[Paper]</a>
                 <a href="https://github.com/davian-robotics/ACG">[Code]</a>
                 <a href="https://davian-robotics.github.io/ACG">[Project Page]</a>
-                <a href="https://huggingface.co/collections/DAVIAN-Robotics/gr00t-n1-2b-post-trained-models">[HF Models]</a>
-                <a href="https://www.youtube.com/watch?v=Fi6VpnPETYU">[Youtube]</a>
+                <a href="https://huggingface.co/collections/DAVIAN-Robotics/acg-gr00t-n1-2b-post-trained-models">[HF Models]</a>
+                <a href="https://www.youtube.com/watch?v=Fi6VpnPETYU">[YouTube]</a>
               </p>
             </div>
           </div>
@@ -262,7 +263,7 @@
             <div class="col-sm-4">
               <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
-                src="https://github.com/user-attachments/assets/5f599ad0-0922-414b-a8ab-e789da068efa" type="video/mp4">
+                src="https://github.com/user-attachments/assets/5f599ad0-0922-414b-a8ab-e789da068efa" type="video/mp4" poster="research/teaser/egox-poster.jpg">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
@@ -284,7 +285,7 @@
             <div class="col-sm-4">
               <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
                 style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;"
-                src="https://pmh9960.github.io/SphereDiff/static/videos/1_hunyuan_storm.mp4" type="video/mp4">
+                src="https://pmh9960.github.io/SphereDiff/static/videos/1_hunyuan_storm.mp4" type="video/mp4" poster="research/teaser/spherediff-poster.jpg">
               </video>
             </div>
             <div class="col" style="margin-top: auto; margin-bottom: auto;">
@@ -296,7 +297,7 @@
                 <i>AAAI 2026, Singapore.</i> <span class="font-weight-bold" style="color: red;">(Oral Presentation)</span><br>
                 <a href="https://arxiv.org/abs/2504.14396">[Paper]</a>
                 <a href="https://github.com/pmh9960/SphereDiff">[Code]</a>
-                <a href="https://pmh9960.github.io/SphereDiff">[Project page]</a>
+                <a href="https://pmh9960.github.io/SphereDiff">[Project Page]</a>
               </p>
             </div>
           </div>
@@ -350,7 +351,7 @@
                 <i>CVPR 2024, Seattle WA, USA.</i><br>
                 <a href="https://arxiv.org/abs/2312.01725">[Paper]</a>
                 <a href="https://github.com/rlawjdghek/StableVITON">[Code]</a>
-                <a href="https://rlawjdghek.github.io/StableVITON/">[Project page]</a>
+                <a href="https://rlawjdghek.github.io/StableVITON/">[Project Page]</a>
               </p>
             </div>
           </div>
@@ -368,7 +369,7 @@
                 <i>ICCV 2023, Paris, France.</i><br>
                 <a href="https://arxiv.org/abs/2308.08157">[Paper]</a>
                 <a href="https://github.com/pmh9960/GCDP/">[Code]</a>
-                <a href="https://pmh9960.github.io/research/GCDP/">[Project page]</a>
+                <a href="https://pmh9960.github.io/research/GCDP/">[Project Page]</a>
               </p>
             </div>
           </div>
@@ -386,7 +387,7 @@
                 <i>WACV 2023, Waikoloa, Hawaii.</i><br>
                 <a href="https://arxiv.org/abs/2207.06831">[Paper]</a>
                 <a href="https://github.com/pmh9960/iColoriT">[Code]</a>
-                <a href="https://pmh9960.github.io/research/iColoriT/">[Project page]</a>
+                <a href="https://pmh9960.github.io/research/iColoriT/">[Project Page]</a>
               </p>
             </div>
           </div>
@@ -410,9 +411,9 @@
 
         <div>
           <h3 class="subtitle">Academic Activities</h3>
-          <!-- Conference Reviewers -->
+          <!-- Conference Reviewing -->
           <p class="lead">
-            <span class="font-weight-bold">Conference Reviewers:</span> CVPR, ICCV, ICLR, NeurIPS, ICML, CoRL, ICRA, AAAI, etc.
+            <span class="font-weight-bold">Conference Reviewing:</span> CVPR, ICCV, ICLR, NeurIPS, ICML, CoRL, ICRA, AAAI, etc.
           </p>
           <!-- Teaching Experience -->
           <h4>Talks</h4>

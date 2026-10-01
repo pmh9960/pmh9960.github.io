@@ -78,13 +78,18 @@ function collapseItems(containerId, visibleCount, itemSelector) {
 
   const toggleWrap = document.createElement('div');
   toggleWrap.className = 'lead';
-  const toggle = document.createElement('a');
-  toggle.href = '#';
+  const toggle = document.createElement('button');
+  toggle.type = 'button';
+  toggle.className = 'fold-toggle';
+  toggle.setAttribute('aria-expanded', 'false');
+  hidden.id = containerId + '-earlier';
+  toggle.setAttribute('aria-controls', hidden.id);
   toggle.textContent = '[Show more]';
   toggle.addEventListener('click', e => {
     e.preventDefault();
     const expanded = hidden.style.display !== 'none';
     hidden.style.display = expanded ? 'none' : '';
+    toggle.setAttribute('aria-expanded', String(!expanded));
     toggle.textContent = expanded ? '[Show more]' : '[Show less]';
   });
   toggleWrap.appendChild(toggle);
