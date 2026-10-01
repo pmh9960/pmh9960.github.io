@@ -228,3 +228,12 @@
     flex-direction: column;
   }
 }
+/* Publication teasers carry an inline margin of 10px on top of the full column
+   width (img-fluid). On desktop that spills into the column gutter unseen; once
+   the columns stack on a phone it pushes the page 5px wider than the screen and
+   lets it scroll sideways. Take the margin back out of the width there. */
+@media (max-width: 575.98px) {
+  .figure-img.img-fluid {
+    max-width: calc(100% - 20px);
+  }
+}
