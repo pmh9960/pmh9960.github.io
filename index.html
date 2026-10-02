@@ -6,6 +6,7 @@
   <!-- Required meta tags -->
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="color-scheme" content="light dark">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,7 +19,7 @@
   <script src="./sources/functions.js"></script>
   <script>
     // [Show more] folding: true shows only the first items with a toggle, false lists everything.
-    const SHOW_MORE = { news: true, publications: false };
+    const SHOW_MORE = { news: false, publications: false };
   </script>
   <script async="" src="./sources/js"></script>
   <script>
@@ -46,9 +47,9 @@
             </div>
             <div class="col-sm-6 intro-column">
               <p class="institute-logos">
-                <a href="https://davian.kaist.ac.kr/" class="institute-logo-davian"><img src="images/logo_davian.svg" alt="DAVIAN Lab"></a>
-                <a href="https://davian-robotics.github.io/" class="institute-logo-davian-robotics"><img src="images/logo_davian_robotics.svg" alt="DAVIAN Robotics"></a>
-                <a href="https://gsai.kaist.ac.kr/?lang=eng" class="institute-logo-kaistai"><img src="images/logo_kaistai.svg" alt="KAIST AI"></a>
+                <a href="https://davian.kaist.ac.kr/" class="institute-logo-davian"><picture><source srcset="images/logo_davian-dark.svg" media="(prefers-color-scheme: dark)"><img src="images/logo_davian.svg" alt="DAVIAN Lab"></picture></a>
+                <a href="https://davian-robotics.github.io/" class="institute-logo-davian-robotics"><picture><source srcset="images/logo_davian_robotics-dark.svg" media="(prefers-color-scheme: dark)"><img src="images/logo_davian_robotics.svg" alt="DAVIAN Robotics"></picture></a>
+                <a href="https://gsai.kaist.ac.kr/?lang=eng" class="institute-logo-kaistai"><picture><source srcset="images/logo_kaistai-dark.svg" media="(prefers-color-scheme: dark)"><img src="images/logo_kaistai.svg" alt="KAIST AI"></picture></a>
               </p>
             </div>
           </div>
@@ -169,7 +170,7 @@
           <div class="row">
             <div class="col-sm-4">
               <video class="figure-img img-fluid" muted loop playsinline webkit-playsinline autoplay preload="metadata"
-                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma-teaser-1.mp4"
+                style="border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);margin:10px;" src="./research/teaser/phuma.mp4"
                 type="video/mp4" poster="research/teaser/phuma-poster.jpg">
               </video>
             </div>

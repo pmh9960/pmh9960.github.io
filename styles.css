@@ -269,3 +269,65 @@
   outline: 2px solid currentColor;
   outline-offset: 3px;
 }
+
+/* ---- dark theme: follows the operating system ------------------------------ */
+
+.institute-logos picture {
+  display: contents;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: #16171b;
+    color: #e4e6ea;
+  }
+
+  a {
+    color: #8ab4f8;
+  }
+
+  a:hover {
+    color: #aecbfa;
+  }
+
+  hr {
+    border-top-color: rgba(255, 255, 255, 0.14);
+  }
+
+  .intro .position {
+    color: #b3b7be;
+  }
+
+  .intro .interests,
+  .publication-note {
+    color: #9aa0a8;
+  }
+
+  .intro-links a::before {
+    color: #6f7680;
+  }
+
+  .fold-toggle {
+    color: #8ab4f8;
+  }
+
+  .fold-toggle:hover {
+    color: #aecbfa;
+  }
+
+  /* Honours and [NEW] are written as inline style="color: red"; pure red is
+     harsh on a dark page, so soften it here. */
+  [style*="color: red"],
+  [style*="color:red"] {
+    color: #ff7b7b !important;
+  }
+
+  /* Teaser frames set their shadow inline; a light shadow vanishes on dark. */
+  .figure-img {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+  }
+}
