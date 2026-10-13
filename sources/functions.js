@@ -103,3 +103,29 @@ function countThroughLastNew(containerId, itemSelector) {
   items.forEach((item, i) => { if (item.textContent.includes('[NEW]')) last = i; });
   return last + 1;
 }
+
+// Light/dark theme. <html data-theme> is set in <head> before paint; this keeps the
+// logo <picture> sources in step and saves the visitor's choice.
+function applyTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  document.querySelector('meta[name="color-scheme"]').content = theme;
+  document.querySelectorAll('source[data-dark]').forEach(function (source) {
+    source.media = theme === 'dark' ? 'all' : 'not all';
+  });
+}
+
+function toggleTheme() {
+  const theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  try { localStorage.setItem('theme', theme); } catch (e) {}
+  applyTheme(theme);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  applyTheme(document.documentElement.dataset.theme);
+  // Without a saved choice, keep following the operating system.
+  matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    let saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (err) {}
+    if (!saved) applyTheme(e.matches ? 'dark' : 'light');
+  });
+});

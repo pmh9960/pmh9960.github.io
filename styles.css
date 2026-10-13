@@ -145,13 +145,18 @@
   margin: 0 0 0 -1.5em;
 }
 
-.intro-links a {
+.intro-links span {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
 }
 
-.intro-links a::before {
+.intro-links a {
+  display: inline-flex;
+  align-items: center;
+}
+
+.intro-links span::before {
   content: "/";
   display: inline-block;
   width: 1.5em;
@@ -270,64 +275,115 @@
   outline-offset: 3px;
 }
 
-/* ---- dark theme: follows the operating system ------------------------------ */
+/* ---- dark theme: <html data-theme> is set before paint (saved choice, else the OS) */
 
 .institute-logos picture {
   display: contents;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color-scheme: dark;
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
 
-  body {
-    background-color: #16171b;
-    color: #e4e6ea;
-  }
+:root[data-theme="dark"] body {
+  background-color: #16171b;
+  color: #e4e6ea;
+}
 
-  a {
-    color: #8ab4f8;
-  }
+:root[data-theme="dark"] a {
+  color: #8ab4f8;
+}
 
-  a:hover {
-    color: #aecbfa;
-  }
+:root[data-theme="dark"] a:hover {
+  color: #aecbfa;
+}
 
-  hr {
-    border-top-color: rgba(255, 255, 255, 0.14);
-  }
+:root[data-theme="dark"] hr {
+  border-top-color: rgba(255, 255, 255, 0.14);
+}
 
-  .intro .position {
-    color: #b3b7be;
-  }
+:root[data-theme="dark"] .intro .position {
+  color: #b3b7be;
+}
 
-  .intro .interests,
-  .publication-note {
-    color: #9aa0a8;
-  }
+:root[data-theme="dark"] .intro .interests,
+:root[data-theme="dark"] .publication-note {
+  color: #9aa0a8;
+}
 
-  .intro-links a::before {
-    color: #6f7680;
-  }
+:root[data-theme="dark"] .intro-links span::before {
+  color: #6f7680;
+}
 
-  .fold-toggle {
-    color: #8ab4f8;
-  }
+:root[data-theme="dark"] .fold-toggle {
+  color: #8ab4f8;
+}
 
-  .fold-toggle:hover {
-    color: #aecbfa;
-  }
+:root[data-theme="dark"] .fold-toggle:hover {
+  color: #aecbfa;
+}
 
-  /* Honours and [NEW] are written as inline style="color: red"; pure red is
-     harsh on a dark page, so soften it here. */
-  [style*="color: red"],
-  [style*="color:red"] {
-    color: #ff7b7b !important;
-  }
+/* Honours and [NEW] are written as inline style="color: red"; pure red is
+   harsh on a dark page, so soften it here. */
+:root[data-theme="dark"] [style*="color: red"],
+:root[data-theme="dark"] [style*="color:red"] {
+  color: #ff7b7b !important;
+}
 
-  /* Teaser frames set their shadow inline; a light shadow vanishes on dark. */
-  .figure-img {
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
-  }
+/* Teaser frames set their shadow inline; a light shadow vanishes on dark. */
+:root[data-theme="dark"] .figure-img {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6) !important;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+/* Light/dark switch, pinned to the top-right corner; shows the theme it switches to. */
+.theme-toggle {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 10;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 50%;
+  background: transparent;
+  color: #555;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle:hover {
+  color: #000;
+  border-color: rgba(0, 0, 0, 0.35);
+}
+
+.theme-toggle svg {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.theme-icon-light,
+:root[data-theme="dark"] .theme-icon-dark {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-icon-light {
+  display: block;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  color: #b3b7be;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+:root[data-theme="dark"] .theme-toggle:hover {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45);
 }
