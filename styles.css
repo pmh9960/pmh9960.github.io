@@ -275,6 +275,17 @@
   outline-offset: 3px;
 }
 
+/* Co-author names link to their homepages but read as plain text until hovered,
+   like the author links on davian-robotics.github.io. */
+a.author {
+  color: inherit;
+}
+
+a.author:hover,
+a.author:focus {
+  color: #0056b3;
+}
+
 /* ---- dark theme: <html data-theme> is set before paint (saved choice, else the OS) */
 
 .institute-logos picture {
@@ -295,6 +306,15 @@
 }
 
 :root[data-theme="dark"] a:hover {
+  color: #aecbfa;
+}
+
+:root[data-theme="dark"] a.author {
+  color: inherit;
+}
+
+:root[data-theme="dark"] a.author:hover,
+:root[data-theme="dark"] a.author:focus {
   color: #aecbfa;
 }
 
